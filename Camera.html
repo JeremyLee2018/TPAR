@@ -14,6 +14,33 @@
 	<script src="threex/threex-armarkercontrols.js"></script>
 </head>
 
+<style>
+.responsive {
+width: 100%;
+height: auto;
+}
+
+.anybutton {
+     top:65%;
+     left:26%;
+     width:100px;
+     height:40px;
+     position: absolute;
+     z-index: 2;
+}
+
+</style>
+
+
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+
+  <a>
+        <img src="images/AR_UI.png"  class="responsive" />
+
+				<a href="item.html" tager="_blank">
+				<img src="images/B_bag.png" style="height:60px;width:200px;" alt="button" class="anybutton" />
+    </a>
+
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
 <!-- 
@@ -114,7 +141,7 @@ function initialize()
 
 	let geometry1 = new THREE.PlaneBufferGeometry(1,1, 4,4);
 	let loader = new THREE.TextureLoader();
-	let texture = loader.load( 'images/answer.png', render );
+	let texture = loader.load( 'images/answer-10.png', render );
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
 	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
