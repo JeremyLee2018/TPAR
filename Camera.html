@@ -140,7 +140,7 @@ function initialize()
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1 = new THREE.PlaneBufferGeometry(10,10, 4,4);
+	let geometry1 = new THREE.PlaneBufferGeometry(width : 10, height :10, widthSegments : 1, heightSegments : 1);
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'images/Answer-10.png', render );
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
