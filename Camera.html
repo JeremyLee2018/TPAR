@@ -144,7 +144,6 @@ function initialize()
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'images/earth.jpg', render );
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
-	  const texture = new THREE.TextureLoader().load( 'images/AR_Catch.png' ); 
 
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.rotation.x = -Math.PI/2;
