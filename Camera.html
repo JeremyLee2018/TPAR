@@ -143,7 +143,23 @@ function initialize()
 	let geometry1 = new THREE.PlaneBufferGeometry(1,1, 4,4);
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'images/Answer-10.png', render );
-	private function onEnterFrame (evt:Event) :void
+
+	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
+	
+	mesh1 = new THREE.Mesh( geometry1, material1 );
+	mesh1.rotation.x = -Math.PI/2;
+	
+	markerRoot1.add( mesh1 );
+}
+
+
+function update()
+{
+	// update artoolkit on every frame
+	if ( arToolkitSource.ready !== false )
+		arToolkitContext.update( arToolkitSource.domElement );
+	
+		private function onEnterFrame (evt:Event) :void
 {           
   if (this.activeMarker_1 && this.activeMarker_2)
   {
@@ -162,20 +178,6 @@ function initialize()
       trace("both buttons are being pressed");
   }
 }
-	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
-	
-	mesh1 = new THREE.Mesh( geometry1, material1 );
-	mesh1.rotation.x = -Math.PI/2;
-	
-	markerRoot1.add( mesh1 );
-}
-
-
-function update()
-{
-	// update artoolkit on every frame
-	if ( arToolkitSource.ready !== false )
-		arToolkitContext.update( arToolkitSource.domElement );
 }
 
 
