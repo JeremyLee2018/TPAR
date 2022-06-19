@@ -149,6 +149,22 @@ function initialize()
 	mesh1.rotation.x = -Math.PI/2;
 	
 	markerRoot1.add( mesh1 );
+	
+        markerRoot2 = new THREE.Group();
+	scene.add(markerRoot1);
+	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot2, {
+		type: 'pattern', patternUrl: "data/TA.patt",
+	})
+
+	let geometry2 = new THREE.PlaneBufferGeometry(2,2, 4,4);
+	let loader = new THREE.TextureLoader();
+	let texture = loader.load( 'images/Answer-10.png', render );
+        let material2 = new THREE.MeshBasicMaterial( { map: texture } );
+	
+	mesh2 = new THREE.Mesh( geometry1, material1 );
+	mesh2.rotation.x = -Math.PI/2;
+	
+	markerRoot2.add( mesh2 );
 }
 
 
