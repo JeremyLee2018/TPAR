@@ -143,6 +143,25 @@ function initialize()
 	let geometry1 = new THREE.PlaneBufferGeometry(1,1, 4,4);
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'images/Answer-10.png', render );
+	private function onEnterFrame (evt:Event) :void
+{           
+  if (this.activeMarker_1 && this.activeMarker_2)
+  {
+     trace("no button is being pressed");
+  }
+  else if (this.activeMarker_1 && this.activeMarker_2 == null)
+  {
+      trace("answer: no");
+  }
+  else if (this.activeMarker_1 == null && this.activeMarker_2)
+  {
+      trace("answer: yes");
+  }
+  else if (this.activeMarker_1 == null && this.activeMarker_2 == null)
+  {
+      trace("both buttons are being pressed");
+  }
+}
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
 	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
