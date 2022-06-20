@@ -40,7 +40,7 @@ height: auto;
 	<a>
 
 		<a>
-			<a href="Camera2.html" tager="_blank">
+			<a href="https://jeremylee2018.github.io/TPAR/Camera2.html" tager="_self">
 		<img src="images/B_button3.png" style="height:60px;width:170px;" alt="button" class="anybutton" />
 	</a>
 <a>
@@ -142,12 +142,10 @@ function initialize()
 		type: 'pattern', patternUrl: "data/01.patt",
 	})
 
-	let geometry1 = new THREE.PlaneBufferGeometry ( 1, 1 );
+	let geometry1 = new THREE.PlaneBufferGeometry(2,2, 4,4);
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'images/01.png', render );
-
-
-	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
+        let material1 = new THREE.MeshBasicMaterial( { map: texture } );
 
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.rotation.x = -Math.PI/2;
