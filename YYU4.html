@@ -22,12 +22,17 @@ height: auto;
 
 .anybutton {
      top:60%;
-     left:32%;
+     left:20%;
      position: absolute;
      z-index: 2;
 }
 
-
+.anybutton2 {
+     top:60%;
+     left:55%;
+     position: absolute;
+     z-index: 2;
+}
 
 </style>
 
@@ -38,14 +43,20 @@ height: auto;
 
 	<a>
 		<a href="item.html" tager="_self">
-			<img src="images/AR_UI8.png"  alt="button" class="responsive" />
+			<img src="images/AR_UI9.png"  alt="button" class="responsive" />
 		</a>
 	<a>
 
 		<a>
-			<a href="YYU4.html" tager="_self">
-		<img src="images/B_button3.png" style="height:60px;width:170px;" alt="button" class="anybutton" />
+			<a href="Catch3.html" tager="_self">
+		<img src="images/true.png" style="height:40px;width:115px;" alt="button" class="anybutton" />
 	</a>
+<a>
+
+	<a>
+		<a href="wrong3.html" tager="_self">
+	<img src="images/false.png" style="height:40px;width:115px;" alt="button" class="anybutton2" />
+</a>
 <a>
 
 
@@ -142,12 +153,12 @@ function initialize()
 	markerRoot1 = new THREE.Group();
 	scene.add(markerRoot1);
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
-		type: 'pattern', patternUrl: "data/06.patt",
+		type: 'pattern', patternUrl: "data/07.patt",
 	})
 
 	let geometry1 = new THREE.PlaneBufferGeometry(2,2, 4,4);
 	let loader = new THREE.TextureLoader();
-	let texture = loader.load( 'images/06.png', render );
+	let texture = loader.load( 'images/Answer-12.png', render );
 
 
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
