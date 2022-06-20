@@ -140,21 +140,19 @@ function initialize()
 	markerRoot1 = new THREE.Group();
 	scene.add(markerRoot1);
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
-		type: 'pattern', patternUrl: "data/01.patt",
+		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1 = new THREE.PlaneBufferGeometry ( 1, 1 );
+	let geometry1 = new THREE.PlaneBufferGeometry(1,1, 4,4);
 	let loader = new THREE.TextureLoader();
-	let texture = loader.load( 'images/01.png', render );
-
-
-	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
+	let texture = loader.load( 'images/01.jpg', render );
 
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.rotation.x = -Math.PI/2;
 
 	markerRoot1.add( mesh1 );
 }
+
 
 
 function update()
