@@ -27,6 +27,8 @@ height: auto;
      z-index: 2;
 }
 
+
+
 </style>
 
 
@@ -36,12 +38,12 @@ height: auto;
 
 	<a>
 		<a href="item.html" tager="_self">
-			<img src="images/AR_UI.png"   alt="button" class="responsive" />
+			<img src="images/AR_UI11.png"  alt="button" class="responsive" />
 		</a>
 	<a>
 
 		<a>
-			<a href="camera2.html" tager="_self">
+			<a href="camera9.html" tager="_self">
 		<img src="images/B_button3.png" style="height:60px;width:170px;" alt="button" class="anybutton" />
 	</a>
 <a>
@@ -140,12 +142,12 @@ function initialize()
 	markerRoot1 = new THREE.Group();
 	scene.add(markerRoot1);
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
-		type: 'pattern', patternUrl: "data/01.patt",
+		type: 'pattern', patternUrl: "data/08.patt",
 	})
 
-	let geometry1 = new THREE.PlaneBufferGeometry ( 1, 1 );
+	let geometry1 = new THREE.PlaneBufferGeometry(2,2, 4,4);
 	let loader = new THREE.TextureLoader();
-	let texture = loader.load( 'images/01.png', render );
+	let texture = loader.load( 'images/08.png', render );
 
 
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
